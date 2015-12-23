@@ -13,6 +13,9 @@
 		37698F321C2A62E60004BC1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37698F301C2A62E60004BC1C /* Main.storyboard */; };
 		37698F341C2A62E60004BC1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37698F331C2A62E60004BC1C /* Assets.xcassets */; };
 		37698F371C2A62E60004BC1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37698F351C2A62E60004BC1C /* LaunchScreen.storyboard */; };
+		37698F401C2A68080004BC1C /* WebViewProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 37698F3F1C2A68080004BC1C /* WebViewProxy.m */; };
+		37698F431C2A70720004BC1C /* JDWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37698F421C2A70720004BC1C /* JDWebView.m */; };
+		37698F451C2A7BE00004BC1C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37698F441C2A7BE00004BC1C /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,11 @@
 		37698F331C2A62E60004BC1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37698F361C2A62E60004BC1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37698F381C2A62E60004BC1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37698F3E1C2A68080004BC1C /* WebViewProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewProxy.h; sourceTree = "<group>"; };
+		37698F3F1C2A68080004BC1C /* WebViewProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewProxy.m; sourceTree = "<group>"; };
+		37698F411C2A70720004BC1C /* JDWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDWebView.h; sourceTree = "<group>"; };
+		37698F421C2A70720004BC1C /* JDWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDWebView.m; sourceTree = "<group>"; };
+		37698F441C2A7BE00004BC1C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37698F451C2A7BE00004BC1C /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +51,7 @@
 		37698F1B1C2A62E60004BC1C = {
 			isa = PBXGroup;
 			children = (
+				37698F441C2A7BE00004BC1C /* WebKit.framework */,
 				37698F261C2A62E60004BC1C /* WKWebView */,
 				37698F251C2A62E60004BC1C /* Products */,
 			);
@@ -67,6 +77,10 @@
 				37698F351C2A62E60004BC1C /* LaunchScreen.storyboard */,
 				37698F381C2A62E60004BC1C /* Info.plist */,
 				37698F271C2A62E60004BC1C /* Supporting Files */,
+				37698F3E1C2A68080004BC1C /* WebViewProxy.h */,
+				37698F3F1C2A68080004BC1C /* WebViewProxy.m */,
+				37698F411C2A70720004BC1C /* JDWebView.h */,
+				37698F421C2A70720004BC1C /* JDWebView.m */,
 			);
 			path = WKWebView;
 			sourceTree = "<group>";
@@ -149,7 +163,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37698F401C2A68080004BC1C /* WebViewProxy.m in Sources */,
 				37698F2F1C2A62E60004BC1C /* ViewController.m in Sources */,
+				37698F431C2A70720004BC1C /* JDWebView.m in Sources */,
 				37698F2C1C2A62E60004BC1C /* AppDelegate.m in Sources */,
 				37698F291C2A62E60004BC1C /* main.m in Sources */,
 			);
@@ -213,7 +229,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -251,7 +267,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -264,6 +280,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WKWebView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.360buy.WKWebView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -275,6 +292,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WKWebView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.360buy.WKWebView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
